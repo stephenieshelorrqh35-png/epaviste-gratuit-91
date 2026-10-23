@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://stephenieshelorrqh35-png.github.io/epaviste-gratuit-91/sitemap.xml
