@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Épaviste Gratuit 91 France | Enlèvement Véhicule 7j/7 VHU</title>
+    <meta name="description" content="Service rapide d'épaviste gratuit 91 en France. Enlèvement d'épave agréé VHU sur rendez-vous et dépannage urgent. Certificat de destruction immédiat.">
+    <style>
+        :root {
+            --primary: #0284c7;
+            --primary-dark: #0369a1;
+            --primary-light: #e0f2fe;
+            --accent: #10b981;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.07);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.05), 0 8px 10px -6px rgb(0 0 0 / 0.05);
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --radius-full: 9999px;
+            --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--text-main);
+            background-color: var(--white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* En-tête / Navigation */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+
+        .brand-logo {
+            font-size: 1.25rem;
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-call-nav {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 0.6rem 1.2rem;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.2s ease;
+        }
+
+        .btn-call-nav:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 0 3rem;
+            background: radial-gradient(circle at 50% 0%, #f0f9ff 0%, #ffffff 80%);
+            text-align: center;
+        }
+
+        .badge-avail {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 0.35rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .badge-avail::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--accent);
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.25rem;
+            color: #0c4a6e;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 680px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .btn-main-call {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            font-size: 1.25rem;
+            font-weight: 700;
+            padding: 1.1rem 2.2rem;
+            border-radius: var(--radius-full);
+            box-shadow: var(--shadow-xl);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-main-call:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 25px 30px -5px rgba(2, 132, 199, 0.25);
+        }
+
+        /* Réassurance */
+        .reassurance {
+            padding: 2.5rem 0;
+            border-top: 1px solid #f1f5f9;
+            border-bottom: 1px solid #f1f5f9;
+            background-color: var(--white);
+        }
+
+        .reassurance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+        }
+
+        .reassurance-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .icon-circle {
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-md);
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .reassurance-title {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .reassurance-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Prestations */
+        .services {
+            padding: 5rem 0;
+            background-color: var(--bg-light);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            border: 1px solid #f1f5f9;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .service-card h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .service-tag {
+            align-self: flex-start;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--primary);
+            background: var(--primary-light);
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+        }
+
+        /* Zones d'intervention */
+        .coverage {
+            padding: 5rem 0;
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .coverage-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+            max-width: 800px;
+            margin: 2rem auto 0;
+        }
+
+        .coverage-badge {
+            background-color: var(--bg-light);
+            border: 1px solid #e2e8f0;
+            padding: 0.6rem 1.25rem;
+            border-radius: var(--radius-full);
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 5rem 0;
+            background-color: var(--bg-light);
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .faq-item {
+            background-color: var(--white);
+            border-radius: var(--radius-md);
+            padding: 1.75rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid #f1f5f9;
+        }
+
+        .faq-item h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: #0f172a;
+        }
+
+        .faq-item p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Contact Section */
+        .contact-cta {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 100%);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .contact-cta h2 {
+            font-size: clamp(1.75rem, 4vw, 2.75rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .contact-cta p {
+            font-size: 1.15rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .phone-display {
+            font-size: clamp(2rem, 5vw, 3.25rem);
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            color: #38bdf8;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .phone-display:hover {
+            color: var(--white);
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            padding: 2.5rem 0;
+            font-size: 0.85rem;
+            border-top: 1px solid #1e293b;
+        }
+
+        .footer-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        @media (min-width: 768px) {
+            .footer-inner {
+                flex-direction: row;
+            }
+        }
+    </style>
+<link rel="canonical" href="https://stephenieshelorrqh35-png.github.io/epaviste-gratuit-91/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="google-site-verification" content="YEJLtIWI7MPk6l1wExQem2apLloVDeOgbB0oZdSdPWU" />
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Epaviste Gratuit 91", "description": "Artisan local à France : epaviste gratuit 91 [ia:gemini]. ☎ 0603745060", "telephone": "+33603745060", "areaServed": ["France"], "url": "https://stephenieshelorrqh35-png.github.io/epaviste-gratuit-91/"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Intervenez-vous à France ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, nous intervenons à France et dans les communes environnantes rapidement."}}, {"@type": "Question", "name": "Combien coûte une intervention de artisan local ?", "acceptedAnswer": {"@type": "Answer", "text": "Le tarif vous est annoncé avant toute intervention. Devis gratuit par téléphone."}}]}</script>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container nav-inner">
+            <a href="https://stephenieshelorrqh35-png.github.io/epaviste-gratuit-91" class="brand-logo" aria-label="Accueil Epaviste Gratuit 91">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
+                <span>Epaviste Gratuit 91</span>
+            </a>
+            <a href="tel:0603745060" class="btn-call-nav" aria-label="Appeler l'artisan local">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>06 03 74 50 60</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="badge-avail">Sur rendez-vous et en dépannage urgent</div>
+                <h1>Votre épaviste gratuit 91 en France</h1>
+                <p>Besoin d'évacuer un véhicule hors d'usage ? Notre équipe d'artisan local prend en charge l'enlèvement complet de votre automobile en toute conformité et sans frais.</p>
+                <div class="hero-cta-group">
+                    <a href="tel:0603745060" class="btn-main-call" aria-label="Contacter l'épaviste gratuit 91">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <span>Appeler au 06 03 74 50 60</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="reassurance">
+            <div class="container">
+                <div class="reassurance-grid">
+                    <div class="reassurance-item">
+                        <div class="icon-circle" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <div>
+                            <div class="reassurance-title">Agréé Centre VHU</div>
+                            <div class="reassurance-desc">Destruction légale et sécurisée</div>
+                        </div>
+                    </div>
+                    <div class="reassurance-item">
+                        <div class="icon-circle" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <div>
+                            <div class="reassurance-title">Intervention Rapide</div>
+                            <div class="reassurance-desc">Prise en charge sous 24 à 48h</div>
+                        </div>
+                    </div>
+                    <div class="reassurance-item">
+                        <div class="icon-circle" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                        </div>
+                        <div>
+                            <div class="reassurance-title">Zéro Frais Cachés</div>
+                            <div class="reassurance-desc">Prestation 100% sans surprise</div>
+                        </div>
+                    </div>
+                    <div class="reassurance-item">
+                        <div class="icon-circle" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                        </div>
+                        <div>
+                            <div class="reassurance-title">Démarches Clé en Main</div>
+                            <div class="reassurance-desc">Certificat de cession fourni</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Nos prestations de recyclage auto</h2>
+                    <p>Faites appel à votre <strong>épaviste gratuit 91</strong> certifié pour une gestion efficace et écologique de tous types de véhicules.</p>
+                </div>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <span class="service-tag">Essentiel</span>
+                        <h3>Enlèvement d'épave gratuit</h3>
+                        <p>Prise en charge de voitures accidentées, hors d'usage, en panne ou roulantes avec transport vers un centre VHU certifié.</p>
+                        <a href="tel:0603745060" class="btn-call-nav">Planifier un retrait</a>
+                    </article>
+                    <article class="service-card">
+                        <span class="service-tag">Accès Difficiles</span>
+                        <h3>Dépannage sous-sol et garage</h3>
+                        <p>Matériel adapté pour remorquer des véhicules bloqués en parking souterrain, accès étroit ou terrain difficile.</p>
+                        <a href="tel:0603745060" class="btn-call-nav">Demander une dépanneuse</a>
+                    </article>
+                    <article class="service-card">
+                        <span class="service-tag">Deux-roues &amp; Utilitaires</span>
+                        <h3>Motos, scooters &amp; fourgons</h3>
+                        <p>Service ouvert à tous les gabarits : nous enlevons camionnettes, deux-roues et épaves volumineuses sans frais.</p>
+                        <a href="tel:0603745060" class="btn-call-nav">Faire enlever</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="coverage">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Secteur de dépannage</h2>
+                    <p>Disponibilité continue en Essonne et ses alentours. Contactez rapidement votre épaviste gratuit 91 pour convenir d'une heure de passage.</p>
+                </div>
+                <div class="coverage-grid">
+                    <span class="coverage-badge">France</span>
+                    <span class="coverage-badge">Évry-Courcouronnes</span>
+                    <span class="coverage-badge">Corbeil-Essonnes</span>
+                    <span class="coverage-badge">Massy</span>
+                    <span class="coverage-badge">Savigny-sur-Orge</span>
+                    <span class="coverage-badge">Sainte-Geneviève-des-Bois</span>
+                    <span class="coverage-badge">Palaiseau</span>
+                    <span class="coverage-badge">Athis-Mons</span>
+                    <span class="coverage-badge">Viry-Châtillon</span>
+                    <span class="coverage-badge">Dourdan</span>
+                    <span class="coverage-badge">Étampes</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Questions fréquentes</h2>
+                    <p>Tout ce qu'il faut savoir sur l'enlèvement d'épave avec un professionnel agréé.</p>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>Intervenez-vous à France ?</h3>
+                        <p>Oui, nous assurons des interventions quotidiennes sur l'ensemble de la zone de France ainsi que dans toutes les communes du département 91, sur rendez-vous ou en dépannage urgent.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Combien coûte une intervention de artisan local ?</h3>
+                        <p>L'enlèvement d'une épave est entièrement gratuit lorsque le véhicule est complet (moteur, composants majeurs et roues présents). Aucun frais de déplacement ne vous sera facturé.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Quels sont les papiers à fournir le jour du retrait ?</h3>
+                        <p>Il vous suffit de présenter la carte grise originale barrée avec la mention « Cédé pour destruction », une copie de votre pièce d'identité et un certificat de situation administrative (non-gage) daté de moins de 15 jours.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Délivrez-vous un certificat officiel ?</h3>
+                        <p>Absolument. En tant que centre de traitement réglementé, un certificat de destruction VHU officiel vous est remis pour vous permettre de résilier votre contrat d'assurance auto immédiatement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-cta">
+            <div class="container">
+                <h2>Votre épave retirée rapidement et sans frais</h2>
+                <p>Contactez dès maintenant votre artisan local qualifié pour convenir d'un rendez-vous sur site.</p>
+                <div>
+                    <a href="tel:0603745060" class="phone-display" aria-label="Numéro de téléphone">06 03 74 50 60</a>
+                </div>
+                <a href="tel:0603745060" class="btn-main-call" style="background: var(--white); color: var(--primary-dark);">
+                    Contacter un épaviste gratuit 91
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>
+                &copy; Epaviste Gratuit 91. Tous droits réservés.
+            </div>
+            <div class="footer-links">
+                <a href="https://stephenieshelorrqh35-png.github.io/epaviste-gratuit-91/mentions-legales.html">Mentions Légales</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
